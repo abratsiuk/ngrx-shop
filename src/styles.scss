@@ -21,7 +21,7 @@ html {
   --header__logo-color-dark: #db3d3d;
   --header-color: #c2c9c9;
   --main-color: #dadddd;
-  --link_active-color: #1f1f81;
+  --link_active-color: #0b0b3a;
 }
 
 body {
@@ -61,6 +61,14 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+.link{
+  text-decoration: none;
+}
+.link-active{
+  color: var(--link_active-color);
+  text-shadow: 1px 0 #0b0b3a;
 }
 
 /*https://fonts.google.com/::after

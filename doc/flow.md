@@ -8,3 +8,5 @@ use css variables instead!
 1.2. vercel doesn`t work with node 14
 
 use github actions instead
+
+

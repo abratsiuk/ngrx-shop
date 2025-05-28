@@ -7,6 +7,14 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
 import { LogoComponent } from './layout/logo/logo.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { CatalogItemComponent } from './catalog-item/catalog-item.component';
+import { OrdersComponent } from './orders/orders.component';
+import { BasketComponent } from './basket/basket.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DevelopComponent } from './develop/develop.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +22,15 @@ import { LogoComponent } from './layout/logo/logo.component';
     FooterComponent,
     HeaderComponent,
     MainComponent,
-    LogoComponent
+    LogoComponent,
+    CatalogComponent,
+    CatalogItemComponent,
+    OrdersComponent,
+    BasketComponent,
+    ProfileComponent,
+    DevelopComponent,
+    OrderDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

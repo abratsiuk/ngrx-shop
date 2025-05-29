@@ -23,6 +23,6 @@ const fundsReducer = createReducer(initialState,
     amount: state.amount + action.payload
   })));
 
-export function reducers(state: IFundsState, action: Action) {
+export function fundsReducerFunction(state: IFundsState, action: Action) {
   return fundsReducer(state, action);
 }

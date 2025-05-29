@@ -2,12 +2,17 @@
   class="Header"
   id="header"
 >
-  <div class="Header__block" routerLink="/catalog">
-    <div class="Header__img">
+  <div class="Header__block">
+    <div class="Header__img" routerLink="/catalog">
       <app-logo></app-logo>
     </div>
 
-    <div class="Header__logo">NgRx Game Shop</div>
+    <div class="Header__logo" routerLink="/catalog">NgRx Game Shop</div>
+
+    <div class="Header__symbols">
+      <app-funds-symbol></app-funds-symbol>
+      <!--      <OrdersSymbol />-->
+    </div>
 
   </div>
   <ul class="Header__menu">

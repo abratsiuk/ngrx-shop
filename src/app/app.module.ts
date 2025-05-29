@@ -20,6 +20,7 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {FundsStoreModule} from './store/funds/funds-store.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {FundsStoreModule} from './store/funds/funds-store.module';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
-    FundsStoreModule
+    FundsStoreModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

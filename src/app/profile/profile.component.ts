@@ -1,8 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {select, Store} from '@ngrx/store';
+import {Component, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
 import {clearFundsAction, decreaseFundsAction, increaseFundsAction} from '../store/funds/funds.actions';
-import {selectFunds} from '../store/funds/funds.selectors';
-import {Observable, Subscription} from 'rxjs';
 import {IRootState} from '../store/IRootState';
 
 @Component({
@@ -10,25 +8,13 @@ import {IRootState} from '../store/IRootState';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit, OnDestroy {
+export class ProfileComponent implements OnInit {
   fundsStep = 1000;
-  funds: number;
-  funds$!: Observable<number>;
-  fundsSub!: Subscription;
 
   constructor(private store: Store<IRootState>) {
-    this.funds = 0;
   }
 
   ngOnInit(): void {
-    this.funds$ = this.store.pipe(select(selectFunds));
-    this.fundsSub = this.funds$.subscribe((value) => {
-      this.funds = value;
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.fundsSub.unsubscribe();
   }
 
   handleClearFunds = () => {

@@ -9,7 +9,7 @@
     >
       - {{ fundsStep }}
     </button>
-    <!--    <FundsSymbol />-->
+    <app-funds-symbol></app-funds-symbol>
     <button
       (click)="handleIncreaseFunds()"
       class="rs-button"
@@ -24,7 +24,6 @@
     </button>
   </div>
 
-  <div><em>funds: {{ funds }}</em></div>
 
   <div class="Profile__orders">
     <!--    <OrdersSymbol />-->

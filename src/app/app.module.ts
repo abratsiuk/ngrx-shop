@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DevelopComponent } from './develop/develop.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

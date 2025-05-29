@@ -1,1 +1,45 @@
-<p>profile works!</p>
+<div class="Profile">
+  <div>Profile</div>
+  <div>for debug:</div>
+  <div class="Profile__funds">
+    <button
+      class="rs-button"
+      (click)="handleDecreaseFunds()"
+    >
+      - {{fundsStep}}
+    </button>
+<!--    <FundsSymbol />-->
+
+    <button
+      class="rs-button"
+      (click)="handleIncreaseFunds()"
+    >
+      + {{fundsStep}}
+    </button>
+    <button
+      class="rs-button"
+      (click)="handleClearFunds()"
+    >
+      clear
+    </button>
+  </div>
+
+  <div class="Profile__orders">
+<!--    <OrdersSymbol />-->
+    <button
+      class="rs-button"
+      (click)="handleClearOrders()"
+    >
+      clear
+    </button>
+  </div>
+  <div class="Profile__basket">
+<!--    <BasketSymbol class="Profile__BasketSymbol" />-->
+    <button
+      class="rs-button"
+      (click)="handleClearBasket()"
+    >
+      clear
+    </button>
+  </div>
+</div>

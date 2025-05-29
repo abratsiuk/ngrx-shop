@@ -1,7 +1,7 @@
 import {clearFundsAction, decreaseFundsAction, IDecreaseFundsAction, IIncreaseFundsAction, increaseFundsAction} from './funds.actions';
 import {Action, createReducer, on} from '@ngrx/store';
 
-interface IFundsState {
+export interface IFundsState {
   amount: number;
 }
 

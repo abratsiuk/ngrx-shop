@@ -2,42 +2,46 @@
   <div>Profile</div>
   <div>for debug:</div>
   <div class="Profile__funds">
+
+    <p>funds$: {{ funds$ | async }}</p>
+    <p>funds: {{ funds }}</p>
+    
     <button
-      class="rs-button"
       (click)="handleDecreaseFunds()"
+      class="rs-button"
     >
-      - {{fundsStep}}
+      - {{ fundsStep }}
     </button>
-<!--    <FundsSymbol />-->
+    <!--    <FundsSymbol />-->
 
     <button
-      class="rs-button"
       (click)="handleIncreaseFunds()"
+      class="rs-button"
     >
-      + {{fundsStep}}
+      + {{ fundsStep }}
     </button>
     <button
-      class="rs-button"
       (click)="handleClearFunds()"
+      class="rs-button"
     >
       clear
     </button>
   </div>
 
   <div class="Profile__orders">
-<!--    <OrdersSymbol />-->
+    <!--    <OrdersSymbol />-->
     <button
-      class="rs-button"
       (click)="handleClearOrders()"
+      class="rs-button"
     >
       clear
     </button>
   </div>
   <div class="Profile__basket">
-<!--    <BasketSymbol class="Profile__BasketSymbol" />-->
+    <!--    <BasketSymbol class="Profile__BasketSymbol" />-->
     <button
-      class="rs-button"
       (click)="handleClearBasket()"
+      class="rs-button"
     >
       clear
     </button>

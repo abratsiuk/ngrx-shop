@@ -9,8 +9,20 @@ use css variables instead!
 
 use github actions instead
 
-## 2.install ngrx
+## 2. setup ngrx 
 
+### 2.1. install ngrx
+
+
+
+version: 9
 ```
 npm install @ngrx/store@9
 ```
+
+### 2.2. install @ngrx/store-devtools
+
+```
+npm install @ngrx/store-devtools@9
+```
+

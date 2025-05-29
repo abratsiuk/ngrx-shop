@@ -7,10 +7,18 @@ export enum FundsActionEnum {
   INCREASE_FUNDS = '@@funds/INCREASE_FUNDS',
 }
 
+export interface IDecreaseFundsAction {
+  payload: number;
+}
+
+export interface IIncreaseFundsAction {
+  payload: number;
+}
+
 export const clearFundsAction = createAction(FundsActionEnum.CLEAR_FUNDS);
 
 export const decreaseFundsAction = createAction(FundsActionEnum.DECREASE_FUNDS,
-  props<{ payload: number }>());
+  props<IDecreaseFundsAction>());
 
 export const increaseFundsAction = createAction(FundsActionEnum.INCREASE_FUNDS,
-  props<{ payload: number }>());
+  props<IIncreaseFundsAction>());

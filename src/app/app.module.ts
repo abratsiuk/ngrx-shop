@@ -1,21 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { MainComponent } from './layout/main/main.component';
-import { LogoComponent } from './layout/logo/logo.component';
-import { CatalogComponent } from './catalog/catalog.component';
-import { CatalogItemComponent } from './catalog-item/catalog-item.component';
-import { OrdersComponent } from './orders/orders.component';
-import { BasketComponent } from './basket/basket.component';
-import { ProfileComponent } from './profile/profile.component';
-import { DevelopComponent } from './develop/develop.component';
-import { OrderDetailComponent } from './order-detail/order-detail.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {MainComponent} from './layout/main/main.component';
+import {LogoComponent} from './layout/logo/logo.component';
+import {CatalogComponent} from './catalog/catalog.component';
+import {CatalogItemComponent} from './catalog-item/catalog-item.component';
+import {OrdersComponent} from './orders/orders.component';
+import {BasketComponent} from './basket/basket.component';
+import {ProfileComponent} from './profile/profile.component';
+import {DevelopComponent} from './develop/develop.component';
+import {OrderDetailComponent} from './order-detail/order-detail.component';
+import {NotFoundComponent} from './not-found/not-found.component';
+
 import {StoreModule} from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,9 +39,14 @@ import {StoreModule} from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

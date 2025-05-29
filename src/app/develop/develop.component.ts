@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IBasketItem} from '../../interfaces/IBasketItem';
 
 @Component({
   selector: 'app-develop',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevelopComponent implements OnInit {
 
-  constructor() { }
+  q: IBasketItem = {price: 0, qty: 0, id: '1', name: '1111'};
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  test() {
+    this.q = {price: 0, qty: 0, id: '7657', name: 'klkh'};
+  }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {clearFundsAction, decreaseFundsAction, increaseFundsAction} from '../store/funds/funds.actions';
 import {selectFunds} from '../store/funds/funds.selectors';
@@ -10,7 +10,7 @@ import {IRootState} from '../store/IRootState';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, OnDestroy {
   fundsStep = 1000;
   funds: number;
   funds$!: Observable<number>;
@@ -27,23 +27,27 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(): void {
+    this.fundsSub.unsubscribe();
+  }
+
   handleClearFunds = () => {
     this.store.dispatch(clearFundsAction());
-  }
+  };
 
   handleDecreaseFunds = () => {
     this.store.dispatch(decreaseFundsAction(
       {payload: this.fundsStep}));
-  }
+  };
   handleIncreaseFunds = () => {
     this.store.dispatch(increaseFundsAction({payload: this.fundsStep}));
-  }
+  };
 
   handleClearOrders = () => {
     // this.store.dispatch(clearOrders());
-  }
+  };
   handleClearBasket = () => {
     // this.store.dispatch(clearBasket());
-  }
+  };
 
 }

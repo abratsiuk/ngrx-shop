@@ -1,11 +1,8 @@
 <div class="Profile">
   <div>Profile</div>
   <div>for debug:</div>
-  <div class="Profile__funds">
 
-    <p>funds$: {{ funds$ | async }}</p>
-    <p>funds: {{ funds }}</p>
-    
+  <div class="Profile__funds">
     <button
       (click)="handleDecreaseFunds()"
       class="rs-button"
@@ -13,7 +10,6 @@
       - {{ fundsStep }}
     </button>
     <!--    <FundsSymbol />-->
-
     <button
       (click)="handleIncreaseFunds()"
       class="rs-button"
@@ -27,6 +23,8 @@
       clear
     </button>
   </div>
+
+  <div><em>funds: {{ funds }}</em></div>
 
   <div class="Profile__orders">
     <!--    <OrdersSymbol />-->

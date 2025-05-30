@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IBasketItem} from '../../interfaces/IBasketItem';
+import {IBasketItem} from '../../../interfaces/IBasketItem';
 
 @Component({
   selector: 'app-develop',

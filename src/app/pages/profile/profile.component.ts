@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {clearFundsAction, decreaseFundsAction, increaseFundsAction} from '../store/funds/funds.actions';
-import {IRootState} from '../store/IRootState';
+import {clearFundsAction, decreaseFundsAction, increaseFundsAction} from '../../store/funds/funds.actions';
+import {IRootState} from '../../store/IRootState';
 
 @Component({
   selector: 'app-profile',

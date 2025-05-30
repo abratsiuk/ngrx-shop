@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
-import {IRootState} from '../../../store/IRootState';
-import {selectFunds} from '../../../store/funds/funds.selectors';
+import {IRootState} from '../../store/IRootState';
+import {selectFunds} from '../../store/funds/funds.selectors';
 import {Subscription} from 'rxjs';
 
 @Component({

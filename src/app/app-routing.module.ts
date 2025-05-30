@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {CatalogComponent} from './catalog/catalog.component';
-import {CatalogItemComponent} from './catalog-item/catalog-item.component';
-import {OrdersComponent} from './orders/orders.component';
-import {OrderDetailComponent} from './order-detail/order-detail.component';
-import {BasketComponent} from './basket/basket.component';
-import {ProfileComponent} from './profile/profile.component';
-import {DevelopComponent} from './develop/develop.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {CatalogComponent} from './pages/catalog/catalog.component';
+import {CatalogItemComponent} from './pages/catalog-item/catalog-item.component';
+import {OrdersComponent} from './pages/orders/orders.component';
+import {OrderDetailComponent} from './pages/order-detail/order-detail.component';
+import {BasketComponent} from './pages/basket/basket.component';
+import {ProfileComponent} from './pages/profile/profile.component';
+import {DevelopComponent} from './pages/develop/develop.component';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -26,4 +26,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

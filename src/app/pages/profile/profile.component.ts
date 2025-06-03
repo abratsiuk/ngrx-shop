@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {clearFundsAction, decreaseFundsAction, increaseFundsAction} from '../../store/funds/funds.actions';
 import {IRootState} from '../../store/IRootState';
+import {clearBasketAction} from '../../store/basket/basket.actions';
 
 @Component({
   selector: 'app-profile',
@@ -33,7 +34,7 @@ export class ProfileComponent implements OnInit {
     // this.store.dispatch(clearOrders());
   };
   handleClearBasket = () => {
-    // this.store.dispatch(clearBasket());
+    this.store.dispatch(clearBasketAction());
   };
 
 }

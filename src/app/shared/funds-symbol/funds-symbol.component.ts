@@ -1,32 +1,22 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {IRootState} from '../../store/IRootState';
 import {selectFunds} from '../../store/funds/funds.selectors';
-import {Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-funds-symbol',
   templateUrl: './funds-symbol.component.html',
   styleUrls: ['./funds-symbol.component.scss']
 })
-export class FundsSymbolComponent implements OnInit, OnDestroy {
-  funds: number;
-  fundsSub!: Subscription;
+export class FundsSymbolComponent implements OnInit {
+  funds$!: Observable<number>;
 
   constructor(private store: Store<IRootState>) {
-    this.funds = 0;
   }
 
   ngOnInit(): void {
-    const funds$ = this.store.pipe(select(selectFunds));
-    this.fundsSub = funds$.subscribe((value) => {
-      this.funds = value;
-    });
+    this.funds$ = this.store.pipe(select(selectFunds));
   }
-
-  ngOnDestroy(): void {
-    this.fundsSub.unsubscribe();
-  }
-
 
 }

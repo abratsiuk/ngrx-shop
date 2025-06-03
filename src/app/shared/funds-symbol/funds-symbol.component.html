@@ -3,6 +3,6 @@
     <div class="FundsSymbol__img">
       <app-funds-svg></app-funds-svg>
     </div>
-    <div class="FundsSymbol__amount">{{ funds }}</div>
+    <div class="FundsSymbol__amount">{{ funds$ | async }}</div>
   </div>
 </div>

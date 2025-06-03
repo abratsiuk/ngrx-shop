@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
   }
+
   &__symbols {
     display: flex;
     align-items: center;
@@ -24,13 +25,16 @@
     margin-top: 1.8rem;
     margin-left: 1.5rem;
     margin-right: 10rem;
+    white-space: nowrap;
   }
+
   &__img {
     width: 5rem;
     height: 5rem;
     margin-left: 2rem;
 
   }
+
   &__menu {
     padding: 0 7rem;
     display: flex;
@@ -39,6 +43,7 @@
 
   &__menuItem {
     margin-right: 3rem;
+
     &:last-of-type {
       margin-right: 0rem;
     }

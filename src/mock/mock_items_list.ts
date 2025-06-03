@@ -1,4 +1,5 @@
-import data from './mock_items_list.json';
+// import data from './mock_items_list.json';
+import data from './response 03.06.2025.json';
 import {IGoodItem} from '../interfaces/IGoodItem';
 
 export const itemsListMock: IGoodItem[] = data.shop

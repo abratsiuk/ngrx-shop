@@ -1,0 +1,7 @@
+<img *ngIf="inBasket;else basketEmpty"
+     alt="Basket in"
+     class="BasketAdd__img" src="assets/images/basket_mini_in.svg"/>
+<ng-template #basketEmpty>
+  <img alt="Basket empty"
+       class="BasketAdd__img" src="assets/images/basket_mini_red.svg"/>
+</ng-template>

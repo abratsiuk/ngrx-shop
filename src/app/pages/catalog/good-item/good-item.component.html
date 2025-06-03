@@ -1,0 +1,38 @@
+<div *ngIf="good" class="GoodItem">
+
+  <div class="GoodItem__top">
+    <div *ngIf="good.banner && good.banner.name" class="GoodItem__banner">{{ good.banner.name }}</div>
+    <div *ngIf="good.priority" class="GoodItem__priority">{{ good.priority }}</div>
+    <img
+      alt={{good.name}}
+      class="GoodItem__image"
+      src={{good.background}}
+    />
+    <div *ngIf="good.rarity && good.rarity.name" class="GoodItem__rarity">{{ good.rarity.name }}</div>
+  </div>
+
+  <div class="GoodItem__content">
+
+    <span [style.color]="good.colors?.color2 || null"
+          class="GoodItem__name">{{
+        ((good.name && good.name.length > 20)
+          ? good.name.substr(0, 17) + '...'
+          : good.name) || ''
+      }}</span>
+    <div class="GoodItem__type">
+      <span class="GoodItem__displayType">{{ good.displayType }}</span>
+      {{ (good.displayType && good.mainType && good.displayType.toLowerCase() === good.mainType.toLowerCase() ? '' : ' (' + good.mainType + ')') }}
+    </div>
+    <div class="GoodItem__description">{{ good.description }}</div>
+    <div *ngIf="good.series && good.series.name">Series:{{ good.series.name }}</div>
+  </div>
+
+  <div class="GoodItem__action">
+    <div class="GoodItem__price">{{ good.price }}</div>
+    <app-basket-add
+      [goodId]="good.id"
+      class="GoodItem__addToCart">
+    </app-basket-add>
+  </div>
+
+</div>

@@ -21,6 +21,8 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {FundsStoreModule} from './store/funds/funds-store.module';
 import {SharedModule} from './shared/shared.module';
+import { GoodsListComponent } from './pages/catalog/goods-list/goods-list.component';
+import { GoodItemComponent } from './pages/catalog/good-item/good-item.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {SharedModule} from './shared/shared.module';
     ProfileComponent,
     DevelopComponent,
     OrderDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GoodsListComponent,
+    GoodItemComponent
   ],
   imports: [
     BrowserModule,

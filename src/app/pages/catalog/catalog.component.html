@@ -1,14 +1,17 @@
-<div className="Catalog">
-  <!-- {status === GoodsStatus.LOADING && <h1>Loading...</h1>}
-   {status === GoodsStatus.REJECTED && <h1>Error: {error}</h1>}
-   <CatalogSearch className="Catalog__CatalogSearch" />
-   <CatalogFilter className="Catalog__CatalogFilter" />
-   <GoodsList
-     className="Catalog__GoodsList"
-     goods={filteredGoods.slice(startIndex, endIndex)}
-   />
-   <Pagination
-     className="Catalog__Pagination"
+<div class="Catalog">
+  <!--  {status === GoodsStatus.LOADING && <h1>Loading...</h1>}
+    {status === GoodsStatus.REJECTED && <h1>Error: {error}</h1>}
+    <CatalogSearch class="Catalog__CatalogSearch" />
+    <CatalogFilter class="Catalog__CatalogFilter" />-->
+
+  <!--  <GoodsList
+      class="Catalog__GoodsList"
+      endIndex)} goods={filteredGoods.slice(startIndex,
+    />-->
+  <app-goods-list></app-goods-list>
+
+  <!-- <Pagination
+     class="Catalog__Pagination"
      pageCount={pageCount}
      pageNumber={page}
      onPrev={handlePrev}

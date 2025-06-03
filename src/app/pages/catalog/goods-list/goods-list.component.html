@@ -1,22 +1,8 @@
-<div class={classname}>
-  <!--      {goods.length === 0 ? (
-                          <p>No goods available.</p>
-                      ) : (
-                          goods.map((item: IGoodItem) => (
-                              <GoodItem
-                                  key={item.id}
-            goCatalogItem={() => navigate(`/catalog/${item.id}`)}
-            {...item}
-            />
-          ))
-        )}-->
+<div *ngIf="goods.length===0; else goodsList"><p>No goods available.</p></div>
+<ng-template #goodsList>
+  <app-good-item
+    *ngFor="let good of goods"
+    [good]="good"
+  ></app-good-item>
+</ng-template>
 
-
-  <div *ngIf="goods.length===0; else goodsList"><p>No goods available.</p></div>
-  <ng-template #goodsList>
-    <app-good-item
-      *ngFor="let good of goods"
-      [good]="good"
-    ></app-good-item>
-  </ng-template>
-</div>

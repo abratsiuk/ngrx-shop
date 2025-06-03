@@ -1,4 +1,4 @@
-<div *ngIf="good" class="GoodItem">
+<ng-container *ngIf="good">
 
   <div class="GoodItem__top">
     <div *ngIf="good.banner && good.banner.name" class="GoodItem__banner">{{ good.banner.name }}</div>
@@ -35,4 +35,4 @@
     </app-basket-add>
   </div>
 
-</div>
+</ng-container>
